@@ -1,12 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
+import NavInShorts from './Components/NavInShorts';
 
 function App() {
 
     return (
-        <>
-            <h1>Hello World</h1>
-        </>
+
+        <div className="App">
+            <NavInShorts />
+        </div>
+
+
     );
 }
 
