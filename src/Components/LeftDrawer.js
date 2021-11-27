@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer({ setCategory }) {
     const classes = useStyles();
     const [state, setState] = React.useState({
 
@@ -78,7 +78,8 @@ export default function SwipeableTemporaryDrawer() {
             <Divider />
             <List>
                 {categories.map((text, index) => (
-                    <ListItem button key={text}>
+                    <ListItem
+                        style={{ height: 40, borderRadius: 3 }} button key={text} onClick={() => setCategory(text)}>
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
